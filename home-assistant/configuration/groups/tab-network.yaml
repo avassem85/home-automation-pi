@@ -1,0 +1,72 @@
+network:
+  name: Netwerk
+  view: yes
+  entities:
+    - group.network_devices
+    - group.pc_devices
+    - group.automation_devices
+    - group.mobile_devices
+    - group.media_devices
+    - group.haveibeenpwned_alex
+    - group.haveibeenpwned_anita
+    - group.speedtest
+  icon: mdi:server-network
+
+network_devices:
+  name: Netwerk Apparatuur
+  entities:
+    - sensor.fritzbox
+    - sensor.fritzrepeater
+    - sensor.mynasfritzbox
+
+pc_devices:
+  name: Computers
+  entities:
+    - sensor.pctigrisfritzbox
+    - sensor.alexsmacbookprofritzbox
+
+automation_devices:
+  name: Home Automation Hubs
+  entities:
+    - sensor.harmonyhubfritzbox
+    - sensor.homeyfritzbox
+    - sensor.philipshuefritzbox
+    - sensor.googlenestfritzbox
+    - sensor.hellosensefritzbox
+
+media_devices:
+  name: Media Apparatuur
+  entities:
+    - sensor.sonytvfritzbox
+    - sensor.iptvxs4allfritzbox
+    - sensor.steamlinkfritzbox
+    - sensor.appletvfritzbox
+    - sensor.sonosfritzbox
+
+mobile_devices:
+  name: Telefoon and Tablets
+  entities:
+    - sensor.alexsipadfritzbox
+    - sensor.iphonevananitafritzbox
+    - sensor.iphonevanalexfritzbox
+    - sensor.iphonealexfritzbox
+
+haveibeenpwned_alex:
+  name: HaveIBeenPwned Alex
+  entities:
+    - sensor.breaches_avassemgmailcom
+    - sensor.breaches_alexvanassemeu
+    - sensor.breaches_alexainfosupportcom
+    - sensor.breaches_alexvanasseminfosupportcom
+
+haveibeenpwned_anita:
+  name: HaveIBeenPwned Anita
+  entities:
+    - sensor.breaches_anitabruekergmailcom
+
+speedtest:
+  name: Speedtest
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+    - sensor.speedtest_download

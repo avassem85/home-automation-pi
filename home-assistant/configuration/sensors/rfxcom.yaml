@@ -1,0 +1,13 @@
+- platform: rfxtrx
+  automatic_add: True
+  devices:
+    0a520d05990100d33b0169:
+       name: Badkamer
+       data_type:
+        - Humidity
+        - Temperature
+    0a520d06850100d13e0169:
+      name: Babykamer
+      data_type:
+       - Humidity
+       - Temperature

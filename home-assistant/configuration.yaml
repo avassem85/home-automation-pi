@@ -1,0 +1,62 @@
+homeassistant:
+  name: Home
+  latitude: !secret HOME_LATITUDE
+  longitude: !secret HOME_LONGITUDE
+  elevation: !secret HOME_ELAVATION
+  unit_system: metric
+  time_zone: !secret HOME_TIME_ZONE
+  customize: !include_dir_merge_named configuration/customizations
+
+frontend:
+http:
+  api_password: !secret HTTP_PASSWORD
+  ssl_certificate: !secret SSL_CERTIFICATE
+  ssl_key: !secret SSL_KEY
+
+# Platforms
+light: !include configuration/platforms/lights.yaml
+climate: !include configuration/platforms/climate.yaml
+media_player: !include configuration/platforms/media_players.yaml
+device_tracker: !include configuration/platforms/device_trackers.yaml
+
+# Components
+nest: !include configuration/components/nest.yaml
+zwave: !include configuration/components/zwave.yaml
+rfxtrx: !include configuration/components/rfxcom.yaml
+mqtt: !include configuration/components/cloudmqtt.yaml
+logger: !include configuration/components/logger.yaml
+ifttt: !include configuration/components/ifttt.yaml
+history:
+discovery:
+sun:
+conversation:
+logbook:
+recorder:
+  purge_days: 2
+updater:
+
+# Groups
+group: !include_dir_merge_named configuration/groups
+
+# Zones
+zone: !include configuration/zones/zones.yaml
+
+# Notifications
+notify: !include configuration/platforms/notify.yaml
+
+# Sensors
+sensor: !include_dir_merge_list configuration/sensors
+
+# Switches
+switch: !include_dir_merge_list configuration/switches
+
+# Scripts
+script: !include_dir_merge_list configuration/scripts
+
+# Automation
+automation: !include_dir_merge_list configuration/automation
+
+# Input
+#input_boolean: !include_dir_merge_list configuration/input/input_boolean
+#input_select: !include_dir_merge_list configuration/input/input_select
+input_slider: !include_dir_merge_named configuration/input/input_slider

@@ -1,0 +1,4 @@
+device_tracker.iphone_iphonevanalex:
+  icon: mdi:cellphone
+  hidden: false
+  friendly_name: iPhone Alex (OWL)

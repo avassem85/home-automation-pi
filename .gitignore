@@ -1,0 +1,14 @@
+*.DS_Store
+node_modules/
+icloud/
+deps/
+.HA_VERSION
+.uuid
+OZW_Log.txt
+*.log
+*.db
+*.db-journal
+*.sqlite
+*.conf
+secrets.yaml
+*.xml

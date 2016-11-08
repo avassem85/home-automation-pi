@@ -1,0 +1,15 @@
+default_view2:
+  name: Thuis
+  view: yes
+  entities:
+    - sun.sun
+    - device_tracker.iphonealex
+    - device_tracker.iphonevananita
+    - group.travel_times
+  icon: mdi:home
+
+travel_times:
+  name: Reistijden Alex
+  entities:
+    - sensor.reistijd_alex_naar_huis
+    - sensor.reistijd_alex_naar_werk

@@ -1,0 +1,195 @@
+sonosfritzbox:
+  hide_if_away: false
+  mac: 5C:AA:FD:A7:9C:1A
+  name: Sonos Hub
+  picture: null
+  track: true
+
+iphonevanalexfritzbox:
+  hide_if_away: false
+  mac: 34:C0:59:94:3D:67
+  name: Babyfoon
+  picture: null
+  track: true
+
+appletvfritzbox:
+  hide_if_away: false
+  mac: 9C:20:7B:B7:6F:24
+  name: Apple TV
+  picture: null
+  track: true
+
+fritzrepeater:
+  hide_if_away: false
+  mac: 3A:31:C4:CA:AA:F5
+  name: Fritzbox Repeater
+  picture: null
+  track: true
+
+pctigrisfritzbox:
+  hide_if_away: false
+  mac: D4:3D:7E:B1:3C:86
+  name: PC Alex
+  picture: null
+  track: true
+
+homeyfritzbox:
+  hide_if_away: false
+  mac: 6C:AD:F8:05:10:63
+  name: Homey Hub
+  picture: null
+  track: true
+
+fritzbox:
+  hide_if_away: false
+  mac: 34:31:C4:8E:71:68
+  name: Fritzbox Router
+  picture: null
+  track: true
+
+mynasfritzbox:
+  hide_if_away: false
+  mac: 00:11:32:15:B1:7A
+  name: Synology Nas
+  picture: null
+  track: true
+
+harmonyhubfritzbox:
+  hide_if_away: false
+  mac: 00:04:20:F8:06:31
+  name: Harmony Hub
+  picture: null
+  track: true
+
+philipshuefritzbox:
+  hide_if_away: false
+  mac: 00:17:88:27:80:B0
+  name: Philips Hue
+  picture: null
+  track: true
+
+iphonevananitafritzbox:
+  hide_if_away: false
+  mac: 70:EC:E4:50:87:9D
+  name: iPhone Anita
+  picture: null
+  track: true
+
+alexsipadfritzbox:
+  hide_if_away: false
+  mac: 14:99:E2:C6:02:8A
+  name: iPad
+  picture: null
+  track: true
+
+alexsmacbookpro:
+  hide_if_away: false
+  mac: null
+  name: "MacBook Pro"
+  picture: null
+  track: true
+
+iphone_iphonevanalex:
+  hide_if_away: false
+  mac: null
+  name: iphone
+  picture: null
+  track: true
+
+iphonevananita:
+  hide_if_away: false
+  mac: null
+  name: Anita
+  picture: https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/2cf/39d/1920a3d.jpg
+  track: true
+
+iphonealex:
+  hide_if_away: false
+  mac: null
+  name: Alex
+  gravatar: avassem@gmail.com
+  track: true
+
+alexsipad:
+  hide_if_away: false
+  mac: null
+  name: Alex's iPad
+  picture: null
+  track: true
+
+iphonevanalex:
+  hide_if_away: false
+  mac: null
+  name: iPhone van Alex
+  picture: null
+  track: true
+
+alexsmacbookprofritzbox:
+  hide_if_away: false
+  mac: 98:01:A7:B6:39:31
+  name: MacBook Alex
+  picture: null
+  track: true
+
+iphonealexfritzbox:
+  hide_if_away: false
+  mac: 38:71:DE:AB:4C:3B
+  name: iPhone Alex
+  picture: null
+  track: true
+
+sonytvfritzbox:
+  hide_if_away: false
+  mac: 00:24:BE:71:43:33
+  name: Sony TV
+  picture: null
+  track: true
+
+googlenestfritzbox:
+  hide_if_away: false
+  mac: 18:B4:30:72:80:18
+  name: Google Nest
+  picture: null
+  track: true
+
+iptvxs4allfritzbox:
+  hide_if_away: false
+  mac: 50:7E:5D:BD:1F:ED
+  name: IPTV XS4ALL
+  picture: null
+  track: true
+
+steamlinkfritzbox:
+  hide_if_away: false
+  mac: E0:31:9E:01:32:33
+  name: Steamlink
+  picture: null
+  track: true
+
+hellosensefritzbox:
+  hide_if_away: false
+  mac: F4:B8:5E:05:04:B2
+  name: Hello Sense
+  picture: null
+  track: true
+
+00066655dd35:
+  hide_if_away: false
+  mac: 00:06:66:55:DD:35
+  name: 00066655dd35
+  picture: null
+  track: true
+
+andrew:
+  hide_if_away: false
+  mac: null
+  name: andrew
+  picture: null
+  track: false
+
+raspberrypi3fritzbox:
+  hide_if_away: false
+  mac: B8:27:EB:7D:BA:EF
+  name: raspberrypi3.fritz.box
+  picture:
+  track: false
