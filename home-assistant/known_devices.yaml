@@ -193,3 +193,17 @@ raspberrypi3fritzbox:
   name: raspberrypi3.fritz.box
   picture:
   track: false
+
+raspberrypifritzbox:
+  hide_if_away: false
+  mac: B8:27:EB:06:83:CB
+  name: raspberrypi.fritz.box
+  picture:
+  track: false
+
+nl1n03240fritzbox:
+  hide_if_away: false
+  mac: F8:16:54:B3:34:1D
+  name: NL1N03240.fritz.box
+  picture:
+  track: false

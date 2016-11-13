@@ -1,0 +1,112 @@
+# docker-compose.yml
+hass:
+  container_name: hass
+  image: lroguet/rpi-home-assistant
+  net: host
+  volumes:
+    - /home/pi/home-automation-pi/home-assistant:/config
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/timezone:ro
+    - /etc/letsencrypt:/etc/letsencrypt:ro
+    - /var/lib/letsencrypt:/var/lib/letsencrypt:ro
+  devices:
+    - /dev/serial/by-id/usb-0658_0200_12345678-9012-3456-7890-123456789012-if00:/dev/zwave
+    - /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1YQHFUZ-if00-port0:/dev/rfxcom
+
+hass2:
+  container_name: hass2
+  image: fgabriel/rpi-home-assistant
+  net: host
+  volumes:
+    - /home/pi/home-automation-pi/home-assistant:/config
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/timezone:ro
+    - /etc/letsencrypt:/etc/letsencrypt:ro
+    - /var/lib/letsencrypt:/var/lib/letsencrypt:ro
+  devices:
+    - /dev/serial/by-id/usb-0658_0200_12345678-9012-3456-7890-123456789012-if00:/dev/zwave
+    - /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1YQHFUZ-if00-port0:/dev/rfxcom
+
+hass3:
+  container_name: hass3
+  image: pithings/rpi-homeassistant
+  net: host
+  volumes:
+    - /home/pi/home-automation-pi/home-assistant:/config
+    - /etc/localtime:/etc/localtime:ro
+    - /etc/timezone:/etc/timezone:ro
+    - /etc/letsencrypt:/etc/letsencrypt:ro
+    - /var/lib/letsencrypt:/var/lib/letsencrypt:ro
+  devices:
+    - /dev/serial/by-id/usb-0658_0200_12345678-9012-3456-7890-123456789012-if00:/dev/zwave
+    - /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1YQHFUZ-if00-port0:/dev/rfxcom
+
+# dockerui:
+#   container_name: dockerui
+#   image: hypriot/rpi-dockerui:latest
+#   ports:
+#     - "9000:9000"
+#   volumes:
+#     - /var/run/docker.sock:/var/run/docker.sock
+
+portainerio:
+  container_name: portainerio
+  image: portainer/portainer:arm
+  ports:
+    - "9000:9000"
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+
+openzwave:
+  container_name: openzwave-control-panel
+  image: pithings/rpi-openzwave-control-panel
+  ports:
+    - "8888:8888"
+  devices:
+   - /dev/serial/by-id/usb-0658_0200_12345678-9012-3456-7890-123456789012-if00:/dev/zwave
+
+letsencrypt:
+  container_name: letsencrypt
+  image: bcecchinato/letsencrypt-rpi
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/lib/letsencrypt:/var/lib/letsencrypt
+      - /var/log/letsencrypt:/var/log/letsencrypt
+  command: "certonly --standalone --text --keep-until-expiring -vvvv --email avassem@gmail.com -d avassem.duckdns.org"
+
+duckdns:
+  container_name: duckdns
+  image: djdefi/rpi-duckdns
+  env_file: ./duckdns/env.config
+  volumes:
+      - /etc/localtime:/etc/localtime:ro
+
+harmony:
+  container_name: harmony-api
+  image: pithings/rpi-harmony-api
+  net: host
+  ports:
+   - "8282:8282"
+  volumes:
+    - ./harmony-api/:/etc/opt/harmony-api/
+
+mosquitto:
+  container_name: mosquitto_mqqt
+  image: fstehle/rpi-mosquitto
+  ports:
+    - "1883:1883"
+    - "9001:9001"
+  volumes:
+    - ./mosquitto-mqqt/config:/mqtt/config:ro
+    - ./mosquitto-mqqt/log:/mqtt/log
+    - ./mosquitto-mqqt/data/:/mqtt/data/
+
+# nginx:
+#   container_name: nginx
+#   image: drakerin/rpi-alpine-nginx
+#   ports:
+#     - "80:80"
+#     - "443:443"

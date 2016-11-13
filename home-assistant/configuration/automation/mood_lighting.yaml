@@ -3,7 +3,7 @@
   trigger:
     platform: sun
     event: sunset
-    offset: "-01:00:00"
+    offset: "-00:00:00"
   action:
     service: homeassistant.turn_on
     entity_id: switch.fibaro_system_fgwpe_wall_plug_switch_4_0
@@ -12,7 +12,7 @@
   hide_entity: False
   trigger:
     platform: time
-    after: '00:00:00'
+    after: '23:00:00'
   action:
     service: homeassistant.turn_off
     entity_id: switch.fibaro_system_fgwpe_wall_plug_switch_4_0

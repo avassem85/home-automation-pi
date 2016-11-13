@@ -54,5 +54,5 @@
   name: CPU
 
 - platform: command_line
-  command: "grep -c invalidpassword /home/hass/.homeassistant/home-assistant.log"
+  command: "grep -c 'Login attempt failed' /config/home-assistant.log"
   name: badlogin

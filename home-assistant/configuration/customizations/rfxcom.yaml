@@ -1,8 +1,8 @@
 sensor.badkamer:
-  friendly_name: Temperatuur
+  friendly_name: Luchtvochtigheid
 
 sensor.badkamer_2:
-  friendly_name: Luchtvochtigheid
+  friendly_name: Temperatuur
 
 sensor.babykamer:
   friendly_name: Temperatuur
